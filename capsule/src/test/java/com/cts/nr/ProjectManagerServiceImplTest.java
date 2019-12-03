@@ -93,12 +93,12 @@ public class ProjectManagerServiceImplTest {
         verify(taskManagerRepository,times(1)).findAll();
         verifyNoMoreInteractions(taskManagerRepository);
     }
-/*
+
     @Test
     public void testUpdateTask() throws JsonParseException, JsonMappingException, IOException {
         Task task = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("task.json").getFile());
+        File file = new File("C:\\json\\task.json");
         task = mapper.readValue(file, Task.class);
         TaskVO taskVO = null;
         File fileTaskVO = new File(classLoader.getResource("task.json").getFile());
@@ -112,7 +112,7 @@ public class ProjectManagerServiceImplTest {
         TypeReference<List<ParentTask>> mapType = new TypeReference<List<ParentTask>>() {};
         List<ParentTask> allParentTasks = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("parenttasks.json").getFile());
+        File file = new File("C:\\json\\parenttasks.json");
         allParentTasks = mapper.readValue(file, mapType);
         when(parentTaskManagerRepository.findAll()).thenReturn(allParentTasks);
         List<ParentTaskVO> allParentTasksDetails = projectManagerServiceImpl.retrieveParentTasks();
@@ -127,7 +127,7 @@ public class ProjectManagerServiceImplTest {
         List<ParentTask> allParentTasks = null;
         String projectId = "3";
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("parenttasks.json").getFile());
+        File file = new File("C:\\json\\parenttasks.json");
         allParentTasks = mapper.readValue(file, mapType);
         when(parentTaskManagerRepository.findAllParentTaskByProjectId(projectId)).thenReturn(allParentTasks);
         List<ParentTaskVO> allParentTasksDetails = projectManagerServiceImpl.retrieveParentTasksForProjectId(projectId);
@@ -140,7 +140,7 @@ public class ProjectManagerServiceImplTest {
     public void testUpdateParentTask() throws JsonParseException, JsonMappingException, IOException {
         ParentTask parent = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("parenttask.json").getFile());
+        File file = new File("C:\\json\\parenttask.json");
         parent = mapper.readValue(file, ParentTask.class);
         ParentTaskVO parentTaskVO = null;
         File fileTaskVO = new File(classLoader.getResource("parenttask.json").getFile());
@@ -155,7 +155,7 @@ public class ProjectManagerServiceImplTest {
         List<Project> allProjects = null;
         Long projectId = (long) 3;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("projects.json").getFile());
+        File file = new File("C:\\json\\projects.json");
         allProjects = mapper.readValue(file, mapType);
         when(projectManagerRepository.findAll()).thenReturn(allProjects);
         when(taskManagerRepository.getTotalTasksForProjectId(projectId)).thenReturn(projectId);
@@ -169,7 +169,7 @@ public class ProjectManagerServiceImplTest {
     public void testUpdateProject() throws JsonParseException, JsonMappingException, IOException {
         Project project = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("project.json").getFile());
+        File file = new File("C:\\json\\project.json");
         project = mapper.readValue(file, Project.class);
         ProjectVO projectVO = null;
         File fileProjectVO = new File(classLoader.getResource("project.json").getFile());
@@ -183,7 +183,7 @@ public class ProjectManagerServiceImplTest {
         TypeReference<List<User>> mapType = new TypeReference<List<User>>() {};
         List<User> allUsers = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("users.json").getFile());
+        File file = new File("C:\\json\\users.json");
         allUsers = mapper.readValue(file, mapType);
         when(userManagerRepository.findAll()).thenReturn(allUsers);
         List<UserVO> allUsersDetails = projectManagerServiceImpl.retrieveUsers();
@@ -196,7 +196,7 @@ public class ProjectManagerServiceImplTest {
     public void testUpdateUser() throws JsonParseException, JsonMappingException, IOException {
         User user = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("user.json").getFile());
+        File file = new File("C:\\json\\user.json");
         user = mapper.readValue(file, User.class);
         UserVO userVO = null;
         File fileUserVO = new File(classLoader.getResource("user.json").getFile());
@@ -204,5 +204,5 @@ public class ProjectManagerServiceImplTest {
         when(userManagerRepository.save(user)).thenReturn(user);
         projectManagerServiceImpl.updateUser(userVO);
     }
-*/
+
 }
