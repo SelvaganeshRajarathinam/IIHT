@@ -52,8 +52,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 /*@RunWith(MockitoJUnitRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc*/
-//@RunWith(SpringRunner.class)
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(SpringRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class ProjectManagerServiceImplTest {
 
     public ProjectManagerRepository projectManagerRepository;
