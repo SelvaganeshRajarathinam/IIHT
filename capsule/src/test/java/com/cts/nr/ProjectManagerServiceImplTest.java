@@ -84,7 +84,8 @@ public class ProjectManagerServiceImplTest {
         TypeReference<List<Task>> mapType = new TypeReference<List<Task>>() {};
         List<Task> allTasks = null;
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("C:\\json\\tasks.json").getFile());
+        //File file = new File(classLoader.getResource("C:\\json\\tasks.json").getFile());
+        File file = new File("C:\\json\\tasks.json");
         allTasks = mapper.readValue(file, mapType);
         when(taskManagerRepository.findAll()).thenReturn(allTasks);
         List<TaskVO> taskDetails = projectManagerServiceImpl.retrieveTasks();
