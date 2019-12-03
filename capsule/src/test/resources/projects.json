@@ -1,0 +1,26 @@
+[
+  {
+    "projectId": 1,
+    "projectName": "AMS Support",
+    "startDate": "12-11-2019",
+    "endDate": "25-11-2019",
+    "priority": "1",
+    "status": "1"
+  },
+  {
+    "projectId": 2,
+    "projectName": "CITI - AFEWS - Dev",
+    "startDate": "12-11-2015",
+    "endDate": "25-11-2016",
+    "priority": "2",
+    "status": "2"
+  },
+  {
+    "projectId": 3,
+    "projectName": "Gradebook system",
+    "startDate": "1-8-2016",
+    "endDate": "31-12-2019",
+    "priority": "20",
+    "status": "1"
+  }
+]

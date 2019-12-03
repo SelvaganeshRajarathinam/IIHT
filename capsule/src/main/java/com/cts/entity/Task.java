@@ -28,7 +28,19 @@ public class Task {
 	@Column(name = "End_Date")
 	private String endDate;
 
+	@Column(name = "status")
+	private Long status;
+
+	@Column(name = "user")
+	private String user;
+
 	public Task() {}
+
+	public Task(Long taskId, String taskName, String priority, String parentTaskName, String startDate, String endDate, Long status, String user){
+		this.taskId = taskId; this.taskName = taskName; this.priority = priority;
+		this.parentTaskName = parentTaskName; this.startDate = startDate; this.endDate = endDate;
+		this.status = status; this.user = user;
+	}
 
 	public String getParentTaskName() {
 		return parentTaskName;
@@ -78,4 +90,19 @@ public class Task {
 		this.priority = priority;
 	}
 
+	public Long getStatus() {
+		return status;
+	}
+
+	public void setStatus(Long priority) {
+		this.status = status;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
 }

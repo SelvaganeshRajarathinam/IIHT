@@ -11,5 +11,15 @@
 		<class-a>com.cts.entity.Task</class-a>
 		<class-b>com.cts.bo.TaskVO</class-b>
 	</mapping>
+
+	<mapping>
+		<class-a>com.cts.entity.Project</class-a>
+		<class-b>com.cts.bo.ProjectVO</class-b>
+	</mapping>
+
+	<mapping>
+		<class-a>com.cts.entity.User</class-a>
+		<class-b>com.cts.bo.UserVO</class-b>
+	</mapping>
 	
 </mappings>

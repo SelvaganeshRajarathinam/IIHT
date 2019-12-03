@@ -8,6 +8,16 @@ public class TaskVO {
 	private String parentTaskName;
 	private String startDate;
 	private String endDate;
+	private Long status;
+	private String user;
+
+	public TaskVO(){}
+
+	public TaskVO(Long taskId, String taskName, String priority, String parentTaskName, String startDate, String endDate, Long status, String user){
+		this.taskId = taskId; this.taskName = taskName; this.priority = priority;
+		this.parentTaskName = parentTaskName; this.startDate = startDate; this.endDate = endDate;
+		this.status = status; this.user = user;
+	}
 
 	public Long getTaskId() {
 		return taskId;
@@ -39,12 +49,22 @@ public class TaskVO {
 	public void setPriority(String priority) {
 		this.priority = priority;
 	}
-
 	public String getParentTaskName() {
 		return parentTaskName;
 	}
 	public void setParentTaskName(String parentTaskName) {
 		this.parentTaskName = parentTaskName;
 	}
-
+	public Long getStatus() {
+		return status;
+	}
+	public void setStatus(Long status) {
+		this.status = status;
+	}
+	public String getUser() {
+		return user;
+	}
+	public void setUser(String user) {
+		this.user = user;
+	}
 }

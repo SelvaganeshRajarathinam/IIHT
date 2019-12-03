@@ -1,0 +1,10 @@
+{
+  "taskId": 1,
+  "taskName": "NR Report generation",
+  "priority": "5",
+  "parentTaskName": "Parent Task 1",
+  "startDate": "1-1-2019",
+  "endDate": "31-12-2019",
+  "status": 1,
+  "user": "Joji"
+}

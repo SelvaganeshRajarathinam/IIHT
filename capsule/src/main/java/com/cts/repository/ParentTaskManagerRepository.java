@@ -12,5 +12,7 @@ public interface ParentTaskManagerRepository extends JpaRepository<ParentTask,Lo
 
 	@Query("SELECT pt FROM ParentTask pt where pt.parentTaskId = ?1")
 	public List<ParentTask> findAllParentTaskByProjectId(String projectId);
+
+	ParentTask findByParentTaskId(String parentTaskId);
 }
 

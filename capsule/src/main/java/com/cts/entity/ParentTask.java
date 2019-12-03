@@ -16,6 +16,10 @@ public class ParentTask {
 
 	public ParentTask() {}
 
+	public ParentTask(Long parentTaskId, String parentTaskName) {
+		this.parentTaskId = parentTaskId;
+		this.parentTaskName = parentTaskName;
+	}
 	public Long getParentTaskId() {
 		return parentTaskId;
 	}
