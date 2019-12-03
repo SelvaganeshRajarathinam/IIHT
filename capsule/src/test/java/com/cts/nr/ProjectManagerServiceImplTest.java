@@ -101,7 +101,7 @@ public class ProjectManagerServiceImplTest {
         File file = new File("C:\\json\\task.json");
         task = mapper.readValue(file, Task.class);
         TaskVO taskVO = null;
-        File fileTaskVO = new File(classLoader.getResource("task.json").getFile());
+        File fileTaskVO = new File("C:\\json\\task.json");
         taskVO = mapper.readValue(fileTaskVO, TaskVO.class);
         when(taskManagerRepository.save(task)).thenReturn(task);
         projectManagerServiceImpl.updateTask(taskVO);
@@ -143,7 +143,7 @@ public class ProjectManagerServiceImplTest {
         File file = new File("C:\\json\\parenttask.json");
         parent = mapper.readValue(file, ParentTask.class);
         ParentTaskVO parentTaskVO = null;
-        File fileTaskVO = new File(classLoader.getResource("parenttask.json").getFile());
+        File fileTaskVO = new File("C:\\json\\parenttask.json");
         parentTaskVO = mapper.readValue(fileTaskVO, ParentTaskVO.class);
         when(parentTaskManagerRepository.save(parent)).thenReturn(parent);
         projectManagerServiceImpl.updateParentTask(parentTaskVO);
@@ -172,7 +172,7 @@ public class ProjectManagerServiceImplTest {
         File file = new File("C:\\json\\project.json");
         project = mapper.readValue(file, Project.class);
         ProjectVO projectVO = null;
-        File fileProjectVO = new File(classLoader.getResource("project.json").getFile());
+        File fileProjectVO = new File("C:\\json\\project.json");
         projectVO = mapper.readValue(fileProjectVO, ProjectVO.class);
         when(projectManagerRepository.save(project)).thenReturn(project);
         projectManagerServiceImpl.updateProject(projectVO);
@@ -199,7 +199,7 @@ public class ProjectManagerServiceImplTest {
         File file = new File("C:\\json\\user.json");
         user = mapper.readValue(file, User.class);
         UserVO userVO = null;
-        File fileUserVO = new File(classLoader.getResource("user.json").getFile());
+        File fileUserVO = new File("user.json");
         userVO = mapper.readValue(fileUserVO, UserVO.class);
         when(userManagerRepository.save(user)).thenReturn(user);
         projectManagerServiceImpl.updateUser(userVO);
