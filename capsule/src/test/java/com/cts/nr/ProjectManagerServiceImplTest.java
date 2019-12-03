@@ -199,7 +199,7 @@ public class ProjectManagerServiceImplTest {
         File file = new File("C:\\json\\user.json");
         user = mapper.readValue(file, User.class);
         UserVO userVO = null;
-        File fileUserVO = new File("user.json");
+        File fileUserVO = new File("C:\\json\\user.json");
         userVO = mapper.readValue(fileUserVO, UserVO.class);
         when(userManagerRepository.save(user)).thenReturn(user);
         projectManagerServiceImpl.updateUser(userVO);
